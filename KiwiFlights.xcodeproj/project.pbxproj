@@ -13,6 +13,11 @@
 		7F30D811262DC4E1008FF56B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F30D80F262DC4E1008FF56B /* Main.storyboard */; };
 		7F30D813262DC4E4008FF56B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F30D812262DC4E4008FF56B /* Assets.xcassets */; };
 		7F30D816262DC4E4008FF56B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F30D814262DC4E4008FF56B /* LaunchScreen.storyboard */; };
+		7F30D823262DC528008FF56B /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F30D820262DC528008FF56B /* UIImageViewExtension.swift */; };
+		7F30D824262DC528008FF56B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F30D821262DC528008FF56B /* UIColorExtension.swift */; };
+		7F30D825262DC528008FF56B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F30D822262DC528008FF56B /* UIViewExtension.swift */; };
+		7F30D82B262DC55B008FF56B /* FlightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F30D82A262DC55B008FF56B /* FlightsModel.swift */; };
+		7F30D82F262DC569008FF56B /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F30D82E262DC569008FF56B /* FlightsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		7F30D812262DC4E4008FF56B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F30D815262DC4E4008FF56B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F30D817262DC4E4008FF56B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F30D820262DC528008FF56B /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		7F30D821262DC528008FF56B /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		7F30D822262DC528008FF56B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		7F30D82A262DC55B008FF56B /* FlightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsModel.swift; sourceTree = "<group>"; };
+		7F30D82E262DC569008FF56B /* FlightsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +69,25 @@
 				7F30D809262DC4E1008FF56B /* AppDelegate.swift */,
 				7F30D80B262DC4E1008FF56B /* SceneDelegate.swift */,
 				7F30D80D262DC4E1008FF56B /* ViewController.swift */,
+				7F30D81F262DC528008FF56B /* Helpers */,
 				7F30D80F262DC4E1008FF56B /* Main.storyboard */,
 				7F30D812262DC4E4008FF56B /* Assets.xcassets */,
 				7F30D814262DC4E4008FF56B /* LaunchScreen.storyboard */,
 				7F30D817262DC4E4008FF56B /* Info.plist */,
+				7F30D82E262DC569008FF56B /* FlightsRequest.swift */,
+				7F30D82A262DC55B008FF56B /* FlightsModel.swift */,
 			);
 			path = KiwiFlights;
+			sourceTree = "<group>";
+		};
+		7F30D81F262DC528008FF56B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7F30D820262DC528008FF56B /* UIImageViewExtension.swift */,
+				7F30D821262DC528008FF56B /* UIColorExtension.swift */,
+				7F30D822262DC528008FF56B /* UIViewExtension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +160,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F30D825262DC528008FF56B /* UIViewExtension.swift in Sources */,
+				7F30D82F262DC569008FF56B /* FlightsRequest.swift in Sources */,
 				7F30D80E262DC4E1008FF56B /* ViewController.swift in Sources */,
 				7F30D80A262DC4E1008FF56B /* AppDelegate.swift in Sources */,
+				7F30D824262DC528008FF56B /* UIColorExtension.swift in Sources */,
+				7F30D823262DC528008FF56B /* UIImageViewExtension.swift in Sources */,
 				7F30D80C262DC4E1008FF56B /* SceneDelegate.swift in Sources */,
+				7F30D82B262DC55B008FF56B /* FlightsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MilosPetrusic.KiwiFlights;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MilosPetrusic.KiwiFlights;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
