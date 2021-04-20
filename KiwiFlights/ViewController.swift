@@ -34,11 +34,12 @@ class ViewController: UIViewController {
     var flightsDetails = [FlightsDetails]()
     
     var page = 0
-    var dateFrom = "19/4/2021"
-    var dateTo = "20/4/2021"
+    var dateFrom = ""
+    var dateTo = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getDate()
         view.backgroundColor = .secondarySystemBackground
         scrollView.delegate = self
         view.addSubview(spinnerView)
@@ -194,8 +195,8 @@ class ViewController: UIViewController {
             cityImage.frame = CGRect(x: 20, y: 0, width: view.frame.size.width - 40, height: (view.frame.size.height / 2) - 40)
             let gradientFrame = CGRect(x: -20, y: 150, width: view.frame.size.width, height: cityImage.frame.size.height - 150)
             flightDetailsView.frame = CGRect(x: 20, y: cityImage.frame.size.height + 20, width: view.frame.size.width - 40, height: 150)
-            destinationLabel.frame = CGRect(x: 40, y: cityImage.frame.size.height - 60, width: 120, height: 40)
-            priceLabel.frame = CGRect(x: view.frame.size.width - 160, y: cityImage.frame.size.height - 60, width: 120, height: 40)
+            destinationLabel.frame = CGRect(x: 40, y: cityImage.frame.size.height - 60, width: 150, height: 40)
+            priceLabel.frame = CGRect(x: view.frame.size.width - 190, y: cityImage.frame.size.height - 60, width: 150, height: 40)
             fromLabel.frame = CGRect(x: 20, y: 20, width: 100, height: 20)
             toLabel.frame = CGRect(x: view.frame.size.width - 160, y: 20, width: 100, height: 20)
             cityCodeFromLabel.frame = CGRect(x: 20, y: 55, width: 60, height: 40)
@@ -264,7 +265,7 @@ class ViewController: UIViewController {
         let today = Date()
         let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today) ?? today
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/mm/YYYY"
+        formatter.dateFormat = "dd/MM/YYYY"
         let todayString = formatter.string(from: today)
         let tomorrowString = formatter.string(from: tomorrow)
         dateFrom = todayString

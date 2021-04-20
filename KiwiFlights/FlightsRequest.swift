@@ -28,6 +28,7 @@ struct FlightsRequest {
                 let decoder = JSONDecoder()
                 let flightsResponse = try decoder.decode(FlightsModel.self, from: jsonData)
                 let flightsData = flightsResponse.data
+                print(resourceURL)
                 completion(.success(flightsData))
             } catch {
                 completion(.failure(.noDataAvailable))
